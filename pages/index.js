@@ -18,7 +18,7 @@ export default function Chat() {
 
     if (protocoloMatch) {
       let num = protocoloMatch[1];
-      protocolo = `protocolo${num}`;
+      protocolo = `Protocolo ${num}`;
 
       let prevContext = context ? `${context}, ${protocolo}` : protocolo;
 
@@ -26,7 +26,7 @@ export default function Chat() {
 
       newRequest = {
         role: 'user',
-        content: `In the string "${prevContext}", count how many times "${protocolo}" appears give only this response: "${protocolo} has been called X times."`
+        content: `In the string "${prevContext}", count how many times "${protocolo}" appears, give only similar responses to this: "${protocolo} has been called X times."`
       };
     } else {
       newRequest = {
